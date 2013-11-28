@@ -1,0 +1,2583 @@
+fileFormatVersion: 2
+guid: 624a813d8a9e34e3c8642d627ddf37c9
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 0
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 16
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: zelda_0
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 753
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_1
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 753
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_2
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 753
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 754
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_4
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 754
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_5
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 753
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_6
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 753
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_7
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 754
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 756
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_9
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 757
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 754
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_11
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 754
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_12
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 760
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_13
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 760
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_14
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 719
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_15
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 719
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_16
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 719
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_17
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 719
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_18
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 719
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_19
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 719
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_20
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 719
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_21
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 718
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_22
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 719
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_23
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 719
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_24
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 719
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_25
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 719
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_26
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 719
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_27
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 719
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_28
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 718
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_29
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 717
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_30
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 683
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_31
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 683
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_32
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 683
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_33
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 683
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_34
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 683
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_35
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 683
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_36
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 682
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_37
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 681
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_38
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 681
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_39
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 681
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_40
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 681
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_41
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 681
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_42
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 680
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_43
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 681
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_44
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 648
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_45
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 648
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_46
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 648
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_47
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 648
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_48
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 648
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_49
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 648
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_50
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 646
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_51
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 646
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_52
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 647
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_53
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 648
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_54
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 647
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_55
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 647
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_56
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 645
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_57
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 645
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_58
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 616
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_59
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 615
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_60
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 615
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_61
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 615
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_62
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 615
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_63
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 617
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_64
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 616
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_65
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 616
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_66
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 616
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_67
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 615
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_68
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 615
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_69
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 615
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_70
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 615
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_71
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 614
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_72
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 613
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_73
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 577
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_74
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 577
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_75
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 577
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_76
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 578
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_77
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 578
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_78
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 578
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_79
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 577
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_80
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 577
+        width: 15
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_81
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 578
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_82
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 577
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_83
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 573
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_84
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 576
+        width: 32
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_85
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 539
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_86
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 539
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_87
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 538
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_88
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 538
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_89
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 537
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_90
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 537
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_91
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 537
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_92
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 538
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_93
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 537
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_94
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 537
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_95
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 538
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_96
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 538
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_97
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 535
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_98
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 536
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_99
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 499
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_100
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 499
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_101
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 500
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_102
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 499
+        width: 15
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_103
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 499
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_104
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 499
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_105
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 500
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_106
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 500
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_107
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 501
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_108
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 502
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_109
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 505
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_110
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 505
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_111
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 505
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_112
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 451
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_113
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 462
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_114
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 462
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_115
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 456
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_116
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 456
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_117
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 456
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_118
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 455
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_119
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 455
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_120
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 456
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_121
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 458
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_122
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 457
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_123
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 422
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_124
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 421
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_125
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 418
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_126
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 418
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_127
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 416
+        width: 79
+        height: 28
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_128
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 416
+        width: 79
+        height: 28
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_129
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 370
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_130
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 370
+        width: 16
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_131
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 371
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_132
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 376
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_133
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 375
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_134
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 375
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_135
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 375
+        width: 32
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_136
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 377
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_137
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 375
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_138
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 375
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_139
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 376
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_140
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 337
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_141
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 337
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_142
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 336
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_143
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 337
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_144
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 337
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_145
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 337
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_146
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 336
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_147
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 336
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_148
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 339
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_149
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 339
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_150
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 339
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_151
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 339
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_152
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 339
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_153
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 339
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_154
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 342
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_155
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 342
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_156
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 342
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_157
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 342
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: arrow
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 344
+        width: 15
+        height: 5
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: left_idle
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 302
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: left_walk_0
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 302
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: left_walk_1
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 302
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: left_walk_2
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 302
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: left_walk_3
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 302
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: left_walk_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 302
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: left_walk_5
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 302
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: left_walk_6
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 302
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: right_idle
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 303
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: right_walk_0
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 303
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: right_walk_1
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 303
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: right_walk_2
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 303
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: right_walk_3
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 303
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: right_walk_4
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 303
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: right_walk_5
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 303
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: right_walk_6
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 303
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: up_idle
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 269
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: up_walk_0
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 269
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: up_walk_1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 269
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: up_walk_2
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 269
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: up_walk_3
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 270
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: up_walk_4
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 270
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: up_walk_5
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 270
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: up_walk_6
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 271
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: down_idle
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 271
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: down_walk_0
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 271
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: down_walk_1
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 271
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: down_walk_2
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 271
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: down_walk_3
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 271
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: down_walk_4
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 271
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: down_walk_5
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 271
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: down_walk_6
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 271
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_191
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 237
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_192
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 237
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_193
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 237
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_194
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 237
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_195
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 237
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_196
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 237
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_197
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 237
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_198
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 237
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_199
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 238
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_200
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 238
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_201
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 238
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_202
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 238
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_203
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 238
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_204
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 238
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_205
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 238
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_206
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 238
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_207
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 202
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_208
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 202
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_209
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 202
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_210
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 202
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_211
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 202
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_212
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 202
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_213
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 202
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_214
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 202
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_215
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 203
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_216
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 203
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_217
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 204
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_218
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 204
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_219
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 204
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_220
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 204
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_221
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 204
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_222
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 204
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_223
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 170
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_224
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 170
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_225
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 170
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_226
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 171
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_227
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 171
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_228
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 171
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_229
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 170
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_230
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 170
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_231
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 170
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_232
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 170
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_233
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 170
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_234
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 170
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_235
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 138
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_236
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 138
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_237
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 138
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_238
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 139
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_239
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 139
+        width: 34
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_240
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 140
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_241
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 140
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_242
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 139
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_243
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 142
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_244
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 138
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_245
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 138
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_246
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 141
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_247
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 102
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_248
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 103
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_249
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 103
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_250
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 104
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_251
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 103
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_252
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 104
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_253
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 104
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_254
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 104
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_255
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 104
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_256
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 104
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_257
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 104
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_258
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 104
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_259
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 66
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_260
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 63
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_261
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 63
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_262
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 62
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_263
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 64
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_264
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 60
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_265
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 58
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_266
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 58
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_267
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 57
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_268
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 57
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_269
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 57
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_270
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 27
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_271
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 25
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_272
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 23
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_273
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 21
+        width: 31
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_274
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 15
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_275
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 12
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_276
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 17
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_277
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 17
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_278
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 17
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_279
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 17
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_280
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 11
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: zelda_281
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 9
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 
