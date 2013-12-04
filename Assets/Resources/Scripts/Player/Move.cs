@@ -22,7 +22,7 @@ namespace Player {
 		}
 
 		private void FlipWeapon(Vector3 velocity) {
-			var arrow = transform.Find("weapon");
+			var arrow = transform.Find("Weapon");
 
 			if (velocity.y > 0 && !swinging)
 				arrow.rotation = Quaternion.Euler(0, 0, 90);
@@ -95,7 +95,7 @@ namespace Player {
     	}
 
 		void Swing() {
-			var arrow = transform.Find("weapon");
+			var arrow = transform.Find("Weapon");
 			var rot = arrow.eulerAngles;
 
 			if (swungDegrees < swingFor) {
@@ -119,7 +119,7 @@ namespace Player {
 			UpdateAnimation();
 
 			if (Input.GetKeyDown("space")) {
-				var arrow = transform.Find("weapon");
+				var arrow = transform.Find("Weapon");
 				var rot = arrow.eulerAngles;
 
 				swingFor = 90;

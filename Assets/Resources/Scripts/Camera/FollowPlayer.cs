@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using Level;
 
 namespace Camera {
@@ -12,44 +13,122 @@ namespace Camera {
 
 		public Generate mapGenerator;
 
-		public Vector2 maxXAndY;		
-		public Vector2 minXAndY;		
+    public float minX;
+    public float maxX;
+
+    public float minY;
+    public float maxY;
 
 		private Transform player;
 
-		void Start () {
+    private Vector3 currentLocation;
+    private List<Vector3> loadedMaps;
+
+    private int cameraLeft = 0;
+    private int cameraRight = 24;
+
+    private int cameraTop = 24;
+    private int cameraBottom = 0;
+
+		void Start() {
+      currentLocation = new Vector3(0, 0);
+      loadedMaps = new List<Vector3>();
+      loadedMaps.Add(new Vector3(0, 0, 0));
 			player = GameObject.FindGameObjectWithTag("Player").transform;	
 		}
 		
-		void FixedUpdate () {
+		void FixedUpdate() {
 			TrackPlayer();
 		}
 
-		bool IsOutsideXMargin() {
+		private bool IsOutsideXMargin() {
 			return Mathf.Abs(transform.position.x - player.position.x) > xMargin;
 		}
 		
-		
-		bool IsOutsideYMargin() {
+		private bool IsOutsideYMargin() {
 			return Mathf.Abs(transform.position.y - player.position.y) > yMargin;
 		}
 
-		void TrackPlayer() {
-			float targetX = transform.position.x;
-			float targetY = transform.position.y;
+    private void SwitchAreas() {
+      if (player.position.x < cameraLeft) {
+        cameraLeft -= 24;
+        cameraRight -= 24;
 
-			targetX = Mathf.Lerp(transform.position.x, player.position.x, xSmooth * Time.deltaTime);
-			targetY = Mathf.Lerp(transform.position.y, player.position.y, ySmooth * Time.deltaTime);
-		
-			targetX = Mathf.Clamp(targetX, minXAndY.x, maxXAndY.x);
-			targetY = Mathf.Clamp(targetY, minXAndY.y, maxXAndY.y);
-			// If our view box is touching a map chunk edge, keep it there, don't let it go further
-			// unless the player is past the chunk edge, then snap (quick lerp) to over there
-//			if(player.transform.x < 4) {
-//				;
-//			}
-			
-			transform.position = new Vector3(targetX, targetY, transform.position.z);
+        currentLocation = new Vector3(currentLocation.x - 1, currentLocation.y);
+
+        var midpoint = (cameraLeft + cameraRight) / 2;
+        
+        minX = midpoint - 1.5f; 
+        maxX = midpoint + 1.5f; 
+      } else if (player.position.x > cameraRight) {
+        cameraLeft += 24;
+        cameraRight += 24;
+
+        currentLocation = new Vector3(currentLocation.x + 1, currentLocation.y);
+
+        var midpoint = (cameraLeft + cameraRight) / 2;
+
+        minX = midpoint - 1.5f; 
+        maxX = midpoint + 1.5f; 
+      } else if (player.position.y < cameraBottom) {
+        cameraTop -= 24;
+        cameraBottom -= 24;
+
+        currentLocation = new Vector3(currentLocation.x, currentLocation.y - 1);
+
+        var midpoint = (cameraTop + cameraBottom) / 2;
+
+        minY = midpoint - 6f; 
+        maxY = midpoint + 6f; 
+      } else if (player.position.y > cameraTop) {
+        cameraTop += 24;
+        cameraBottom += 24;
+
+        currentLocation = new Vector3(currentLocation.x, currentLocation.y + 1);
+
+        var midpoint = (cameraTop + cameraBottom) / 2;
+
+        minY = midpoint - 6f; 
+        maxY = midpoint + 6f;
+      } 
+
+      LoadMap();
+    }
+
+    private void LoadMap() {
+      var isLoaded = false;
+
+      foreach (var location in loadedMaps) {
+        if (location.x == currentLocation.x && location.y == currentLocation.y) {
+          isLoaded = true;
+        }
+      }
+
+      if (!isLoaded) {
+        mapGenerator.Load((int)currentLocation.x, (int)currentLocation.y);
+        loadedMaps.Add(currentLocation);
+      }
+    }
+
+    private void UpdateCameraPosition() {
+      var targetX = transform.position.x;
+      var targetY = transform.position.y;
+      
+      var playerX = player.position.x;
+      var playerY = player.position.y;
+      
+      targetX = Mathf.Lerp(targetX, playerX, xSmooth * Time.deltaTime);
+      targetY = Mathf.Lerp(targetY, playerY, ySmooth * Time.deltaTime);
+      
+      targetX = Mathf.Clamp(targetX, minX, maxX);
+      targetY = Mathf.Clamp(targetY, minY, maxY);
+      
+      transform.position = new Vector3(targetX, targetY, transform.position.z);
+    }
+
+		void TrackPlayer() {
+      UpdateCameraPosition();
+      SwitchAreas();
 		}
 	}
 }

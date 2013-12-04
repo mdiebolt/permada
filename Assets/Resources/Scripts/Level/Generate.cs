@@ -5,49 +5,25 @@ using Camera;
 
 namespace Level {
 	public class Generate : MonoBehaviour {
-		private Area center;
-		private Area west;
-		private Area north;
-		private Area south;
-		private Area east;
+		public Area activeArea;
+
+    private int MapX = 0;
+    private int MapY = 0;
 
 		void Start() {
-			center = gameObject.AddComponent<Area>();
-			center.cardinal = "center";
-			center.LoadAt(0, 0);
-
-			//GenerateNeighbors();
+      CreateArea();
 		}
 
-		void GenerateNeighbors() {
-			GenerateNorth();
-			GenerateSouth();
-			GenerateEast();
-			GenerateWest();
-		}
+    private void CreateArea() {
+      activeArea = gameObject.AddComponent<Area>();
+      activeArea.LoadAt(MapX, MapY);
+    }
 
-		void GenerateEast() {
-			east = gameObject.AddComponent<Area>();
-			east.cardinal = "east";
-			east.LoadAt(2, 0);
-		}
+    public void Load(int x, int y) {
+      MapX = x;
+      MapY = y;
 
-		void GenerateWest() {	
-			west = gameObject.AddComponent<Area>();
-			west.cardinal = "west";
-			west.LoadAt(-2, 0);
-		}
-
-		void GenerateNorth() {
-			north = gameObject.AddComponent<Area>();
-			north.cardinal = "north";
-			north.LoadAt(0, 2);
-		}
-
-		void GenerateSouth() {
-			south = gameObject.AddComponent<Area>();
-			south.cardinal = "south";
-			south.LoadAt(0, -2);
-		}
+      CreateArea();
+    }
 	}
 }

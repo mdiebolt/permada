@@ -11,7 +11,7 @@ namespace Level {
 		private GameObject rock;
 		private GameObject bush;
 
-		public string cardinal { get; set; } 
+    public Rect bounds;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="Level.Area"/> class.
@@ -50,7 +50,7 @@ namespace Level {
 		}
 
 		private void AddToParent(GameObject obj) {
-			obj.transform.parent = GameObject.Find(cardinal).transform;
+			obj.transform.parent = GameObject.Find("ActiveArea").transform;
 		}
 
 		/// <summary>
@@ -73,15 +73,14 @@ namespace Level {
 		/// <param name="xOffset">X offset in area coordinates</param>
 		/// <param name="yOffset">Y offset in area coordinates</param>
 		public void LoadAt(int xOffset, int yOffset) {
-			float halfWidth = 0.5f;
-			float halfHeight = 0.5f;
+      float tileCount = 24;
 
-			float xMin = (xOffset * 12) + halfWidth;
-			float xMax = xMin + 24;
+			float xMin = xOffset * tileCount;
+			float xMax = xMin + tileCount;
 			
-			float yMin = (yOffset * 12) + halfHeight;
-			float yMax = yMin + 24;
-			
+			float yMin = yOffset * tileCount;
+			float yMax = yMin + tileCount;
+
 			for (float x = xMin; x < xMax; x++) {
 				for (float y = yMin; y < yMax; y++) {
 					var prefab = PickRandomTile();

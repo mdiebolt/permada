@@ -3,7 +3,6 @@ using System.Collections;
 
 namespace Player {
 	public class Weapon : MonoBehaviour {
-		private SpriteRenderer spriteRenderer; 
 		private int damage = 1;
 
 		void OnTriggerEnter2D(Collider2D collider) {
