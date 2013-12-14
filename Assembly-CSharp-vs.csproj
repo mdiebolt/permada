@@ -49,7 +49,9 @@
      <Compile Include="Assets\AutoMotion\Scripts\Auto.cs" />
      <Compile Include="Assets\Resources\Scripts\Camera\FollowPlayer.cs" />
      <Compile Include="Assets\Resources\Scripts\Damagable.cs" />
+     <Compile Include="Assets\Resources\Scripts\Enemy\Bullet.cs" />
      <Compile Include="Assets\Resources\Scripts\Enemy\Move.cs" />
+     <Compile Include="Assets\Resources\Scripts\Enemy\Shoot.cs" />
      <Compile Include="Assets\Resources\Scripts\Expirable.cs" />
      <Compile Include="Assets\Resources\Scripts\Knockable.cs" />
      <Compile Include="Assets\Resources\Scripts\Level\Area.cs" />
