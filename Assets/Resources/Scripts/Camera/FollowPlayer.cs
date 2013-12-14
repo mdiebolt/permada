@@ -119,10 +119,10 @@ namespace Camera {
       
       targetX = Mathf.Lerp(targetX, playerX, xSmooth * Time.deltaTime);
       targetY = Mathf.Lerp(targetY, playerY, ySmooth * Time.deltaTime);
-      
+
       targetX = Mathf.Clamp(targetX, minX, maxX);
-      targetY = Mathf.Clamp(targetY, minY, maxY);
-      
+      targetY = Mathf.Clamp(targetY, minY, maxY); 
+
       transform.position = new Vector3(targetX, targetY, transform.position.z);
     }
 

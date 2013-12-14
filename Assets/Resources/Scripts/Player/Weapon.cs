@@ -6,12 +6,13 @@ namespace Player {
 		private int damage = 1;
 
 		void OnTriggerEnter2D(Collider2D collider) {
-			if (collider.tag == "Enemy") {
-				var enemy = collider.gameObject;
+			var obj = collider.gameObject;
 
-				enemy.SendMessage("TakeDamage", damage);
-				enemy.SendMessage("KnockBack", transform.position);
-			}
+      if (obj.GetComponent<Damagable>())
+			  obj.SendMessage("Damage", damage);
+
+      if (obj.GetComponent<Knockable>())
+			  obj.SendMessage("KnockBack", transform.position);
 		}
 	}
 }

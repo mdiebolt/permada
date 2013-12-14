@@ -48,26 +48,13 @@ namespace Enemy {
 				spriteRenderer.color = new Color(color.r, color.g, color.b, 0.5f);
 		}
 
-		void TakeDamage(int damage) {
+    void Damage(int damage) {
 			health -= damage;
 
 			flickerCooldown = 70;
 
 			if (health <= 0)
 				Destroy(gameObject);
-		}
-
-		void KnockBack(Vector3 sourcePosition) {
-			var position = transform.position;
-			var knockbackDistance = (position - sourcePosition) / 2;
-
-			var dust = gameObject.GetComponent<ParticleSystem>();
-			dust.Play();
-			dust.enableEmission = true;
-			dust.renderer.sortingLayerName = "UI";
-			dust.renderer.sortingOrder = 5;
-
-			StartCoroutine(transform.MoveTo(knockbackDistance, 0.25f));
 		}
 	}
 }

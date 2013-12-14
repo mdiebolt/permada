@@ -75,16 +75,25 @@ namespace Level {
 		public void LoadAt(int xOffset, int yOffset) {
       float tileCount = 24;
 
-			float xMin = xOffset * tileCount;
-			float xMax = xMin + tileCount;
+      float halfWidth = 0.5f;
+      float halfHeight = 0.5f;
+
+			float xMin = (xOffset * tileCount) + halfWidth;
+			float xMax = (xMin + tileCount) + halfWidth;
 			
-			float yMin = yOffset * tileCount;
-			float yMax = yMin + tileCount;
+			float yMin = (yOffset * tileCount) + halfHeight;
+			float yMax = (yMin + tileCount) + halfHeight;
 
 			for (float x = xMin; x < xMax; x++) {
 				for (float y = yMin; y < yMax; y++) {
-					var prefab = PickRandomTile();
-					var obj = Instantiate(prefab, new Vector3(x, y), Quaternion.identity) as GameObject;
+          GameObject prefab;
+
+          if (xOffset == 0 && yOffset == 0)
+            prefab = boringGrass;
+          else
+					  prefab = PickRandomTile();
+					
+          var obj = Instantiate(prefab, new Vector3(x, y), Quaternion.identity) as GameObject;
 
 					if (prefab.name == "Bush") {
 						obj.renderer.sortingOrder = 1;

@@ -9,12 +9,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
-  - 61: {fileID: 6100000}
   - 50: {fileID: 5000000}
+  - 61: {fileID: 6100000}
   - 114: {fileID: 11400000}
   m_Layer: 10
   m_Name: Bush
-  m_TagString: Enemy
+  m_TagString: Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,9 +64,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6500c6421bee84a9e898084351399ef3, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f40bc23c3d774f5792f2c58cbe063fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

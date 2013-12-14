@@ -48,12 +48,16 @@
   <ItemGroup>
      <Compile Include="Assets\AutoMotion\Scripts\Auto.cs" />
      <Compile Include="Assets\Resources\Scripts\Camera\FollowPlayer.cs" />
+     <Compile Include="Assets\Resources\Scripts\Damagable.cs" />
      <Compile Include="Assets\Resources\Scripts\Enemy\Move.cs" />
+     <Compile Include="Assets\Resources\Scripts\Expirable.cs" />
+     <Compile Include="Assets\Resources\Scripts\Knockable.cs" />
      <Compile Include="Assets\Resources\Scripts\Level\Area.cs" />
-     <Compile Include="Assets\Resources\Scripts\Level\Destroy.cs" />
      <Compile Include="Assets\Resources\Scripts\Level\Generate.cs" />
      <Compile Include="Assets\Resources\Scripts\Player\Move.cs" />
      <Compile Include="Assets\Resources\Scripts\Player\Weapon.cs" />
+     <Compile Include="Assets\Resources\Scripts\Weapons\Arrow.cs" />
+     <Compile Include="Assets\Resources\Scripts\Weapons\Bomb.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

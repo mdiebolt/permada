@@ -4,7 +4,7 @@ using System.Collections;
 namespace Player {
 	public class Move : MonoBehaviour {
 		private Vector3 velocity = new Vector3(1.0f, 0, 0);
-		private Vector3 facing;
+		public Vector3 facing;
 		private float speed = 6.0f;
 
 		private bool swinging = false;
@@ -74,18 +74,18 @@ namespace Player {
 				velocity.y = -speed;
 		}
 
-		private void UpdateAnimation() {
-			var animator = GetComponent<Animator>();
-
-			if (velocity.x > 0)
-				animator.Play("right_walk");
-			else if (velocity.x < 0)
-				animator.Play("left_walk");
-			else if (velocity.y > 0)
-				animator.Play("up_walk");
-			else if (velocity.y < 0)
-				animator.Play("down_walk");
-		}
+//		private void UpdateAnimation() {
+//			var animator = GetComponent<Animator>();
+//
+//			if (velocity.x > 0)
+//				animator.Play("right_walk");
+//			else if (velocity.x < 0)
+//				animator.Play("left_walk");
+//			else if (velocity.y > 0)
+//				animator.Play("up_walk");
+//			else if (velocity.y < 0)
+//				animator.Play("down_walk");
+//		}
 
 		private void SetWeaponEnabled(bool value) {
 			var weapon = GameObject.FindGameObjectWithTag("Weapon");
@@ -116,7 +116,17 @@ namespace Player {
 			UpdateFacing();
 			MovePlayer(velocity);
 			FlipWeapon(facing);
-			UpdateAnimation();
+			//UpdateAnimation();
+
+      if (Input.GetKeyDown("b")) {
+        var bomb = Resources.Load<GameObject>("Prefabs/Bomb");
+        Instantiate(bomb, transform.position, Quaternion.identity);
+      }
+
+      if (Input.GetKeyDown("a")) {
+        var prefab = Resources.Load<GameObject>("Prefabs/Arrow");
+        Instantiate(prefab, transform.position, Quaternion.identity);
+      }
 
 			if (Input.GetKeyDown("space")) {
 				var arrow = transform.Find("Weapon");
