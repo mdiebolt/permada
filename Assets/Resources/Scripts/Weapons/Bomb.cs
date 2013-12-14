@@ -36,8 +36,8 @@ namespace Weapons {
       float elapsed = 0;
       float duration = 1;
 
-      var damageCircle = gameObject.GetComponent<CircleCollider2D>();
-      damageCircle.enabled = true;
+      var damageArea = gameObject.GetComponent<CircleCollider2D>();
+      damageArea.enabled = true;
 
       while (elapsed < duration) {
         elapsed = Mathf.MoveTowards(elapsed, duration, Time.deltaTime);
