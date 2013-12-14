@@ -54,6 +54,7 @@
      <Compile Include="Assets\Resources\Scripts\Knockable.cs" />
      <Compile Include="Assets\Resources\Scripts\Level\Area.cs" />
      <Compile Include="Assets\Resources\Scripts\Level\Generate.cs" />
+     <Compile Include="Assets\Resources\Scripts\Player\Attack.cs" />
      <Compile Include="Assets\Resources\Scripts\Player\Move.cs" />
      <Compile Include="Assets\Resources\Scripts\Player\Weapon.cs" />
      <Compile Include="Assets\Resources\Scripts\Weapons\Arrow.cs" />
