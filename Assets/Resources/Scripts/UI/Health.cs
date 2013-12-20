@@ -33,7 +33,7 @@ public class Health : MonoBehaviour {
     drawHearts();
   }
 
-  void RedrawHealth() {
+  void RedrawPlayerHealth() {
     drawHearts();
   }
 }
