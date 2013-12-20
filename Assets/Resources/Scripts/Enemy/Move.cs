@@ -42,11 +42,14 @@ namespace Enemy {
 
 			var color = spriteRenderer.color;
 
-			if (flickerCooldown % 5 == 0) 
-				spriteRenderer.color = new Color(color.r, color.g, color.b, 1.0f);
-			else
-				spriteRenderer.color = new Color(color.r, color.g, color.b, 0.5f);
-		}
+			if (flickerCooldown % 5 == 0) {
+        color.a = 1.0f;
+        spriteRenderer.color = color;
+      } else {
+        color.a = 0.5f;
+        spriteRenderer.color = color;
+      }
+    }
 
     void Damage(int damage) {
 			health -= damage;

@@ -8,6 +8,30 @@ namespace Player {
     private float swingFrom = 0; // Where to start swinging
     private int swungDegrees = 0;
 
+    private IEnumerator ghost() {
+      float elapsed = 0;
+      float duration = 10;
+      
+      var collider = gameObject.GetComponent<CircleCollider2D>();
+      collider.enabled = false;
+
+      var spriteRenderer = GetComponent<SpriteRenderer>();
+      var color = spriteRenderer.color;
+      color.a = 0.3f;
+      
+      spriteRenderer.color = color;
+      
+      while (elapsed < duration) {
+        elapsed = Mathf.MoveTowards(elapsed, duration, Time.deltaTime);
+        yield return null;
+      }
+      
+      collider.enabled = true;
+
+      color.a = 1.0f;
+      spriteRenderer.color = color;
+    }
+
     private void SetWeaponEnabled(bool value) {
       var weapon = GameObject.FindGameObjectWithTag("Weapon");
       
@@ -59,6 +83,15 @@ namespace Player {
       if (Input.GetKeyDown("a")) {
         var prefab = Resources.Load<GameObject>("Prefabs/Arrow");
         Instantiate(prefab, transform.position, Quaternion.identity);
+      }
+
+      if (Input.GetKeyDown("g")) {
+        var grave = GameObject.Find("Grave");
+        var distance = Vector3.Distance(grave.transform.position, transform.position);
+
+        if (distance < 1.25f) {
+          StartCoroutine(ghost());
+        }
       }
       
       if (Input.GetKeyDown("space") && !swinging) {

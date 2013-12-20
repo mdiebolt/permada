@@ -6,6 +6,7 @@ namespace Player {
 		private Vector3 velocity = new Vector3(1.0f, 0, 0);
 		public Vector3 facing;
 		private float speed = 6.0f;
+    private int serpinCount = 0;
 
 		private void MovePlayer() {
 			var position = transform.position;
@@ -58,5 +59,15 @@ namespace Player {
 			UpdateFacing();
 			MovePlayer();	
 		}
+
+    void OnTriggerEnter2D(Collider2D collider) {
+      var obj = collider.gameObject;
+
+      if(collider.name == "Serpin") {
+        Destroy(obj);
+        serpinCount += 1;
+        Debug.Log(serpinCount);
+      }
+    }
 	}
 }
