@@ -59,6 +59,7 @@
      <Compile Include="Assets\Resources\Scripts\Player\Attack.cs" />
      <Compile Include="Assets\Resources\Scripts\Player\Move.cs" />
      <Compile Include="Assets\Resources\Scripts\Player\Weapon.cs" />
+     <Compile Include="Assets\Resources\Scripts\UI\Health.cs" />
      <Compile Include="Assets\Resources\Scripts\Weapons\Arrow.cs" />
      <Compile Include="Assets\Resources\Scripts\Weapons\Bomb.cs" />
   </ItemGroup>

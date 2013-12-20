@@ -11,21 +11,21 @@ namespace Player {
     private IEnumerator ghost() {
       float elapsed = 0;
       float duration = 10;
-      
+
       var collider = gameObject.GetComponent<CircleCollider2D>();
       collider.enabled = false;
 
       var spriteRenderer = GetComponent<SpriteRenderer>();
       var color = spriteRenderer.color;
       color.a = 0.3f;
-      
+
       spriteRenderer.color = color;
-      
+
       while (elapsed < duration) {
         elapsed = Mathf.MoveTowards(elapsed, duration, Time.deltaTime);
         yield return null;
       }
-      
+
       collider.enabled = true;
 
       color.a = 1.0f;
@@ -34,39 +34,39 @@ namespace Player {
 
     private void SetWeaponEnabled(bool value) {
       var weapon = GameObject.FindGameObjectWithTag("Weapon");
-      
+
       weapon.renderer.enabled = value;
       weapon.GetComponent<BoxCollider2D>().enabled = value;
     }
 
     private void FlipWeapon(Vector3 velocity) {
       var arrow = transform.Find("Weapon");
-      
+
       if (velocity.y > 0 && !swinging)
         arrow.rotation = Quaternion.Euler(0, 0, 90);
       else if (velocity.y < 0 && !swinging)
         arrow.rotation = Quaternion.Euler(0, 0, 270);
-      
+
       if (velocity.x > 0 && !swinging)
         arrow.rotation = Quaternion.Euler(0, 0, 0);
       else if (velocity.x < 0 && !swinging)
         arrow.rotation = Quaternion.Euler(0, 0, 180);
     }
-    
+
     void Swing() {
       var arrow = transform.Find("Weapon");
       var rot = arrow.eulerAngles;
-      
+
       if (swungDegrees < swingFor) {
         swungDegrees += 5;
         rot.z += 5;
       } else {
         swinging = false;
         swungDegrees = 0;
-        
+
         SetWeaponEnabled(false);
       }
-      
+
       arrow.eulerAngles = rot;
     }
 
@@ -93,7 +93,7 @@ namespace Player {
           StartCoroutine(ghost());
         }
       }
-      
+
       if (Input.GetKeyDown("space") && !swinging) {
         var arrow = transform.Find("Weapon");
         var rot = arrow.eulerAngles;
@@ -115,9 +115,9 @@ namespace Player {
         rot.z = swingFrom;
         arrow.eulerAngles = rot;
       }
-     
+
       if (swinging)
-        Swing();	
+        Swing();
   	}
   }
 }
