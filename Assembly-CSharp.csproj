@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\AutoMotion\Scripts\Auto.cs" />
+     <Compile Include="Assets\JSON\JSON.cs" />
      <Compile Include="Assets\Resources\Scripts\Camera\FollowPlayer.cs" />
      <Compile Include="Assets\Resources\Scripts\Damagable.cs" />
      <Compile Include="Assets\Resources\Scripts\Enemy\Bullet.cs" />
@@ -56,6 +57,7 @@
      <Compile Include="Assets\Resources\Scripts\Knockable.cs" />
      <Compile Include="Assets\Resources\Scripts\Level\Area.cs" />
      <Compile Include="Assets\Resources\Scripts\Level\Generate.cs" />
+     <Compile Include="Assets\Resources\Scripts\Level\Tilemap.cs" />
      <Compile Include="Assets\Resources\Scripts\Player\Attack.cs" />
      <Compile Include="Assets\Resources\Scripts\Player\Move.cs" />
      <Compile Include="Assets\Resources\Scripts\Player\Weapon.cs" />
