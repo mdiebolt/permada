@@ -31,7 +31,7 @@ public class Tilemap : MonoBehaviour {
     tilesHigh = int.Parse(data["height"].ToString());
   }
 
-  public void LoadMap() {
+  private void LoadMap() {
     int firstGid = 1;
     foreach (Hashtable layer in (ArrayList)data["layers"]) {
       int tileIndex = 0;
@@ -53,7 +53,8 @@ public class Tilemap : MonoBehaviour {
           // we'll return a null object if we run
           // into tiled's placeholder (tile id 0)
           if (obj != null) {
-            GameObject mapTile = Instantiate(obj, new Vector3(j, i), Quaternion.identity) as GameObject;
+            // offset by 0.5 so the map snaps to the game grid
+            GameObject mapTile = Instantiate(obj, new Vector3(j + 0.5f, i - 0.5f), Quaternion.identity) as GameObject;
             mapTile.renderer.sortingLayerName = layerName;
             mapTile.transform.parent = transform;
           }
@@ -64,16 +65,20 @@ public class Tilemap : MonoBehaviour {
     }
   }
 
-	void Start() {
-    tilesetMap = new Dictionary<int, string>();
-    tilesetMap.Add(0, ""); // Represents the empty Prefab
-
-    var json = File.ReadAllText("Assets/Resources/Tilemaps/forest.json");
+  public void LoadMap(string name) {
+    var json = File.ReadAllText("Assets/Resources/Tilemaps/" + name + ".json");
     data = (Hashtable)JSON.JsonDecode(json);
 
     SetTileData();
     PopulateTilesetMap();
-
+    
     LoadMap();
+  }
+
+	void Start() {
+    tilesetMap = new Dictionary<int, string>();
+    tilesetMap.Add(0, ""); // Represents the empty Prefab
+
+    LoadMap("forest1");
   }
 }

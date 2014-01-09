@@ -8,9 +8,9 @@ namespace Enemy {
     private int damage = 1;
     private bool reversed = false;
 
-  	void Update () {
+  	void Update() {
       var rotation = transform.eulerAngles;
-      rotation.z -= 5.0f;
+      rotation.z -= 100.0f * Time.deltaTime;
        
       transform.eulerAngles = rotation;
 

@@ -2,16 +2,15 @@
 using System.Collections;
 
 namespace Enemy {
-	public class Move : MonoBehaviour {
-		private float speed = 0.05f;
+	public class Follow : MonoBehaviour {
+		private float speed = 3.0f;
 		private int health = 3;
 		private SpriteRenderer spriteRenderer;
-		private CircleCollider2D circleCollider;
 		private Vector3 velocity = new Vector3(0, 0, 0);
+    private bool invulnerable = false;
 
 		void Start() {
 			spriteRenderer = GetComponent<SpriteRenderer>();
-			circleCollider = GetComponent<CircleCollider2D>();
 		}
 
 		private Vector3 PlayerPosition() {
@@ -24,7 +23,7 @@ namespace Enemy {
 
 		private void MoveEnemy() {
 			var position = transform.position;
-			position += velocity;
+			position += velocity * Time.deltaTime;
 
 			transform.position = position;
 		}
@@ -43,7 +42,7 @@ namespace Enemy {
       int frameCount = 0;
 
       var color = spriteRenderer.color;
-      circleCollider.enabled = false;
+      invulnerable = true;
 
       while (elapsed < duration) {
         elapsed = Mathf.MoveTowards(elapsed, duration, Time.deltaTime);
@@ -60,18 +59,20 @@ namespace Enemy {
         yield return null;
       }
 
-      circleCollider.enabled = true;
+      invulnerable = false;
       color.a = 1.0f;
       spriteRenderer.color = color;
     }
 
     void Damage(int damage) {
-			health -= damage;
+      if (!invulnerable) {
+			  health -= damage;
+      
+  			if (health <= 0)
+  				Destroy(gameObject);
 
-			if (health <= 0)
-				Destroy(gameObject);
-
-			StartCoroutine(Flicker());
+  			StartCoroutine(Flicker());
+      }
 		}
 	}
 }

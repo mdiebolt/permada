@@ -5,8 +5,10 @@ public class Damagable : MonoBehaviour {
   public int maxHealth = 5;
 
   private void updateUI() {
-    var obj = GameObject.Find("Health");
-    obj.SendMessage("RedrawPlayerHealth");
+    if (GameObject.Find("Health")) {
+      var obj = GameObject.Find("Health");
+      obj.SendMessage("RedrawPlayerHealth");
+    }
   }
 
   void Heal(int amount) {

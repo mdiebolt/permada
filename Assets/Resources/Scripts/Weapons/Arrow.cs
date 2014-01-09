@@ -5,7 +5,7 @@ using Player;
 namespace Weapons {
   public class Arrow : MonoBehaviour {
     private Vector3 velocity;
-    private float speed = 0.25f;
+    private float speed = 15f;
 
     private int damage = 2;
 
@@ -24,13 +24,13 @@ namespace Weapons {
       else
         transform.eulerAngles = new Vector3(0, 0, 270);
 
-      transform.position += velocity;
+      transform.position += velocity * Time.deltaTime;
     }
    
     void OnTriggerEnter2D(Collider2D collider) {
       var obj = collider.gameObject;
 
-      if (obj.GetComponent<Damagable>()) {
+      if (obj.tag == "Enemy" && obj.GetComponent<Damagable>()) {
         obj.SendMessage("Damage", damage);
         Destroy(gameObject);
       }

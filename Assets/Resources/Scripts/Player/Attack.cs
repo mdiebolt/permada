@@ -8,10 +8,16 @@ namespace Player {
     private float swingFrom = 0; // Where to start swinging
     private int swungDegrees = 0;
 
-    private IEnumerator ghost() {
+    private IEnumerator CountTo(float duration) {
       float elapsed = 0;
-      float duration = 10;
+      
+      while (elapsed < duration) {
+        elapsed = Mathf.MoveTowards(elapsed, duration, Time.deltaTime);
+        yield return null;
+      }
+    }
 
+    private IEnumerator ghost() {
       var collider = gameObject.GetComponent<CircleCollider2D>();
       collider.enabled = false;
 
@@ -21,15 +27,20 @@ namespace Player {
 
       spriteRenderer.color = color;
 
-      while (elapsed < duration) {
-        elapsed = Mathf.MoveTowards(elapsed, duration, Time.deltaTime);
-        yield return null;
-      }
+      yield return StartCoroutine(CountTo(10));
 
       collider.enabled = true;
 
       color.a = 1.0f;
       spriteRenderer.color = color;
+    }
+
+    private IEnumerator bigHitPause() {
+      Time.timeScale = 0;
+
+      yield return StartCoroutine(CountTo(30));
+
+      Time.timeScale = 1.0f;
     }
 
     private void SetWeaponEnabled(bool value) {
@@ -70,6 +81,10 @@ namespace Player {
       arrow.eulerAngles = rot;
     }
 
+    void FixedUpdate() {
+
+    }
+
   	void Update() {
       var facing = GetComponent<Move>().facing;
 
@@ -92,6 +107,15 @@ namespace Player {
         if (distance < 1.25f) {
           StartCoroutine(ghost());
         }
+      }
+
+      if (Input.GetKeyDown("o")) {
+        var camera = GameObject.Find("Camera");
+        StartCoroutine(camera.transform.Shake(0.25f, 0.25f));
+      }
+
+      if (Input.GetKeyDown("t")) {
+        StartCoroutine(bigHitPause());
       }
 
       if (Input.GetKeyDown("space") && !swinging) {
