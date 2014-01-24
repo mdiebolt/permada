@@ -79,6 +79,6 @@ public class Tilemap : MonoBehaviour {
     tilesetMap = new Dictionary<int, string>();
     tilesetMap.Add(0, ""); // Represents the empty Prefab
 
-    LoadMap("forest1");
+    LoadMap("maze");
   }
 }

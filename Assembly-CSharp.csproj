@@ -55,6 +55,7 @@
      <Compile Include="Assets\Resources\Scripts\Enemy\HorizontalSlide.cs" />
      <Compile Include="Assets\Resources\Scripts\Enemy\Path.cs" />
      <Compile Include="Assets\Resources\Scripts\Enemy\Shoot.cs" />
+     <Compile Include="Assets\Resources\Scripts\Enemy\VerticalSlide.cs" />
      <Compile Include="Assets\Resources\Scripts\Expirable.cs" />
      <Compile Include="Assets\Resources\Scripts\Knockable.cs" />
      <Compile Include="Assets\Resources\Scripts\Level\Area.cs" />
