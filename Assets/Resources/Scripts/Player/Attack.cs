@@ -36,9 +36,15 @@ namespace Player {
     }
 
     private IEnumerator bigHitPause() {
+      int elapsed = 0;
+      int duration = 30;
+
       Time.timeScale = 0;
 
-      yield return StartCoroutine(CountTo(30));
+      while (elapsed < duration) {
+        elapsed += 1; 
+        yield return null;
+      }
 
       Time.timeScale = 1.0f;
     }
@@ -110,7 +116,7 @@ namespace Player {
       }
 
       if (Input.GetKeyDown("o")) {
-        var camera = GameObject.Find("Camera");
+        var camera = GameObject.FindWithTag("MainCamera");
         StartCoroutine(camera.transform.Shake(0.25f, 0.25f));
       }
 

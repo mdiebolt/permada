@@ -17,29 +17,24 @@ namespace Player {
 
 		private void UpdateFacing() {
 			if(Input.GetKey(KeyCode.LeftArrow)) {
-				facing.x = -1.0f;
-				facing.y = 0;
+        facing = Vector3.left;
 			}
 			
 			if(Input.GetKey(KeyCode.RightArrow)) {
-				facing.x = 1.0f;
-				facing.y = 0;
+        facing = Vector3.right;
 			}
 
 			if(Input.GetKey(KeyCode.UpArrow)) {
-				facing.x = 0;
-				facing.y = 1.0f;
+        facing = Vector3.up;
 			}
 				
 			if(Input.GetKey(KeyCode.DownArrow)) {
-				facing.x = 0;
-				facing.y = -1.0f;
+        facing = Vector3.down;
 			}
 		}
 
 		private void UpdateVelocity() {
-			velocity.x = 0;
-			velocity.y = 0;
+      velocity = Vector3.zero;
 			
 			if(Input.GetKey(KeyCode.LeftArrow))
 				velocity.x = -speed;
@@ -66,7 +61,6 @@ namespace Player {
       if(collider.name == "Serpin") {
         Destroy(obj);
         serpinCount += 1;
-        Debug.Log(serpinCount);
       }
     }
 	}

@@ -1,12 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Scripts/Player/Attack.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Scripts/Enemy/HorizontalSlide.cs">
     <Files>
-      <File FileName="Assets/Resources/Scripts/Player/Attack.cs" Line="78" Column="26" />
-      <File FileName="Assets/Resources/Scripts/Enemy/Follow.cs" Line="1" Column="1" />
-      <File FileName="Assets/Resources/Scripts/Weapons/Arrow.cs" Line="27" Column="54" />
-      <File FileName="Assets/Resources/Scripts/Enemy/Bullet.cs" Line="13" Column="24" />
-      <File FileName="Assets/Resources/Scripts/Player/Weapon.cs" Line="1" Column="1" />
+      <File FileName="Assets/Resources/Scripts/Enemy/HorizontalSlide.cs" Line="26" Column="41" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

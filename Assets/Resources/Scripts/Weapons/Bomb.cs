@@ -42,12 +42,13 @@ namespace Weapons {
     }
 
     private IEnumerator Explode() {
-      float duration = 1;
+      var camera = GameObject.FindWithTag("MainCamera");
+      StartCoroutine(camera.transform.Shake(0.25f, 0.25f));
 
       var damageArea = gameObject.GetComponent<CircleCollider2D>();
       damageArea.enabled = true;
 
-      yield return StartCoroutine(CountTo(duration));
+      yield return StartCoroutine(CountTo(1));
 
       Destroy(gameObject);
     }

@@ -15,9 +15,7 @@ namespace Enemy {
       transform.eulerAngles = rotation;
 
       var position = transform.position;
-
       position += (direction * speed * Time.deltaTime);
-
       transform.position = position;
   	}
 
