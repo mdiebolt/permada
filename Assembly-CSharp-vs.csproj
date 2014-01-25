@@ -58,6 +58,7 @@
      <Compile Include="Assets\Resources\Scripts\Enemy\VerticalSlide.cs" />
      <Compile Include="Assets\Resources\Scripts\Expirable.cs" />
      <Compile Include="Assets\Resources\Scripts\Knockable.cs" />
+     <Compile Include="Assets\Resources\Scripts\Level\Activate.cs" />
      <Compile Include="Assets\Resources\Scripts\Level\Area.cs" />
      <Compile Include="Assets\Resources\Scripts\Level\Generate.cs" />
      <Compile Include="Assets\Resources\Scripts\Level\Tilemap.cs" />

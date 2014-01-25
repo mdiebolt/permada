@@ -61,6 +61,8 @@ namespace Player {
       if(collider.name == "Serpin") {
         Destroy(obj);
         serpinCount += 1;
+        // TODO calculate this based on total number of serpin
+        speed += 1.0f;
       }
     }
 	}
