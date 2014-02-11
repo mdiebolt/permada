@@ -1157,7 +1157,7 @@ TextureImporter:
         height: 13
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: zelda_124
+    - name: slider
       rect:
         serializedVersion: 2
         x: 75

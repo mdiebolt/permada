@@ -4,110 +4,18 @@ using System.Collections.Generic;
 
 namespace Level {
 	public class Area : MonoBehaviour {
-		public List<GameObject> tiles;
-
-		private GameObject boringGrass;
-		private GameObject grass;
-		private GameObject rock;
-		private GameObject bush;
-
-    public Rect bounds;
-
-		/// <summary>
-		/// Initializes a new instance of the <see cref="Level.Area"/> class.
-		/// Represents one screen of the map, loading an adjacent map when
-		/// the player moves past the screen edge.
-		/// </summary>
-		public Area() {
-			tiles = new List<GameObject>();
-
-			boringGrass = Resources.Load<GameObject>("Prefabs/EmptyGrass");
-			grass = Resources.Load<GameObject>("Prefabs/Grass");
-			rock = Resources.Load<GameObject>("Prefabs/Rock");
-			bush = Resources.Load<GameObject>("Prefabs/Bush");
-		}
-
-		/// <summary>
-		/// Picks a random map tile prefab for use with 
-		/// procedural level generation.
-		/// </summary>
-		/// <returns>Prefab of the random tile selected.</returns>
-		private GameObject PickRandomTile() {
-			var number = Random.Range(0, 10);
-			var prefab = grass;
-			
-			if (number < 5) {
-				if (number >= 2)
-					prefab = boringGrass;
-			} else {
-				if (number > 5)
-					prefab = bush;
-				else
-					prefab = rock;
-			}
-			
-			return prefab;
-		}
-
-		private void AddToParent(GameObject obj) {
+		private void addToParent(GameObject obj) {
 			obj.transform.parent = GameObject.Find("ActiveArea").transform;
 		}
 
-		/// <summary>
-		/// Cleans up all tiles in an area.
-		/// Call this when an Area is unloaded.
-		/// </summary>
-		public void CleanUpTiles() {
-			foreach (var tile in tiles) {
-				Destroy(tile);
-			}
-		}
+		public void Load(string name, int xOffset, int yOffset) {
+      var mapData = Tilemap.Load(name);
 
-		/// <summary>
-		/// Loads an area with a given offset. The
-		/// offsets are defined in terms of complete 
-		/// areas so (1, 0) load a map to the right
-		/// of the one defined at (0, 0) at the same
-		/// y position.
-		/// </summary>
-		/// <param name="xOffset">X offset in area coordinates</param>
-		/// <param name="yOffset">Y offset in area coordinates</param>
-		public void LoadAt(int xOffset, int yOffset) {
-      float tileCount = 24;
-
-      float halfWidth = 0.5f;
-      float halfHeight = 0.5f;
-
-			float xMin = (xOffset * tileCount) + halfWidth;
-			float xMax = (xMin + tileCount) + halfWidth;
-			
-			float yMin = (yOffset * tileCount) + halfHeight;
-			float yMax = (yMin + tileCount) + halfHeight;
-
-			for (float x = xMin; x < xMax; x++) {
-				for (float y = yMin; y < yMax; y++) {
-          GameObject prefab;
-
-          if (xOffset == 0 && yOffset == 0)
-            prefab = boringGrass;
-          else
-					  prefab = PickRandomTile();
-					
-          var obj = Instantiate(prefab, new Vector3(x, y), Quaternion.identity) as GameObject;
-
-					if (prefab.name == "Bush") {
-						obj.renderer.sortingOrder = 1;
-
-						var grass = Instantiate(boringGrass, new Vector3(x, y), Quaternion.identity) as GameObject;
-						grass.renderer.sortingOrder = 0;
-						AddToParent(grass);
-						tiles.Add(grass);
-					}
-
-					AddToParent(obj);
-					tiles.Add(obj);
-				}
-			}
+      foreach (var tile in mapData) {
+        var position = tile.Position + new Vector3(xOffset, yOffset, 0);
+        var obj = Instantiate(tile.TilePrefab, position, Quaternion.identity) as GameObject;
+        addToParent(obj);
+      }
 		}
 	}
 }	

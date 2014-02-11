@@ -11,7 +11,7 @@ namespace Camera {
 		public float xSmooth = 16f;		
 		public float ySmooth = 16f;	
 
-		public Generate mapGenerator;
+		public World world;
 
     public float minX;
     public float maxX;
@@ -22,7 +22,6 @@ namespace Camera {
 		private Transform player;
 
     private Vector3 currentLocation;
-    private List<Vector3> loadedMaps;
 
     private int cameraLeft = 0;
     private int cameraRight = 24;
@@ -32,8 +31,6 @@ namespace Camera {
 
 		void Start() {
       currentLocation = new Vector3(0, 0);
-      loadedMaps = new List<Vector3>();
-      loadedMaps.Add(new Vector3(0, 0, 0));
 			player = GameObject.FindGameObjectWithTag("Player").transform;	
 		}
 		
@@ -96,18 +93,8 @@ namespace Camera {
     }
 
     private void LoadMap() {
-      var isLoaded = false;
-
-      foreach (var location in loadedMaps) {
-        if (location.x == currentLocation.x && location.y == currentLocation.y) {
-          isLoaded = true;
-        }
-      }
-
-      if (!isLoaded) {
-        mapGenerator.Load((int)currentLocation.x, (int)currentLocation.y);
-        loadedMaps.Add(currentLocation);
-      }
+      // TODO switch active area on map
+      //world.Load((int)currentLocation.x, (int)currentLocation.y);
     }
 
     private void UpdateCameraPosition() {

@@ -22,6 +22,11 @@
     <property name="Prefab" value="Rock"/>
    </properties>
   </tile>
+  <tile id="428">
+   <properties>
+    <property name="Prefab" value="Slider"/>
+   </properties>
+  </tile>
   <tile id="492">
    <properties>
     <property name="Prefab" value="Trigger"/>
@@ -35,7 +40,7 @@
  </layer>
  <layer name="Foreground" width="25" height="25">
   <data encoding="base64" compression="zlib">
-   eJzFlG0KwCAIhuu/1+j+J9sdRrCgiW++lmNCjFX6aH60WkoLrC6R+7OeJaL+ZwYrK4Y856LuZzGG/au+OVkMKfbbj/2sOJDPHkPnL5th5c9iMHVqMVD+EIMRr3e8OJANhhtlIH1mBngxrxiMsG/A+OL5Zdlj2Kj+V3ZYP4Z9VP/Wdz5nGF79nzJW8yuDoe1rPWtOnuSD6R2kl8lAvn8Vx58Mtp939hmJzCytF1k7On3dv5wqXw==
+   eJzFlG8KgCAMxe271/D4Ha07hJBg4z33VosGEqnbb3N/2lZKC6wukfuzHpJq/meGKitGvc6ruZ/FGPaP7c7JYtSC337sZ8XBfPYYNn/ZDJQ/xFDqFDFY/hhjF97a6x0vDmZD4UYZTF+ZAV7MK4Yne2COKL54fiF7CpvV/8qO6sewz+offedzheHV/1vGan5lMKx9q4fm5Jt8KL3D9DIZzPev4viTofbzk31F+j1l7iO9yHqi09cJJqgsaQ==
   </data>
  </layer>
 </map>
