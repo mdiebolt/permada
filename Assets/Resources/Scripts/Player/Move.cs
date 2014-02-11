@@ -5,8 +5,7 @@ namespace Player {
 	public class Move : MonoBehaviour {
 		private Vector3 velocity = new Vector3(1.0f, 0, 0);
 		public Vector3 facing;
-		private float speed = 6.0f;
-    private int serpinCount = 0;
+		public float Speed = 6.0f;
 
 		private void MovePlayer() {
 			var position = transform.position;
@@ -37,16 +36,16 @@ namespace Player {
       velocity = Vector3.zero;
 			
 			if(Input.GetKey(KeyCode.LeftArrow))
-				velocity.x = -speed;
+				velocity.x = -Speed;
 			
 			if(Input.GetKey(KeyCode.RightArrow)) 
-				velocity.x = speed;
+				velocity.x = Speed;
 
 			if(Input.GetKey(KeyCode.UpArrow))
-				velocity.y = speed;
+				velocity.y = Speed;
 
 			if(Input.GetKey(KeyCode.DownArrow))
-				velocity.y = -speed;
+				velocity.y = -Speed;
 		}
    
 		void Update() {
@@ -54,16 +53,5 @@ namespace Player {
 			UpdateFacing();
 			MovePlayer();	
 		}
-
-    void OnTriggerEnter2D(Collider2D collider) {
-      var obj = collider.gameObject;
-
-      if(collider.name == "Serpin") {
-        Destroy(obj);
-        serpinCount += 1;
-        // TODO calculate this based on total number of serpin
-        speed += 1.0f;
-      }
-    }
 	}
 }

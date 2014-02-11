@@ -9,6 +9,10 @@ using System;
 
 namespace Level {
   public class Tilemap { 
+    // We need to offset our lookups by 
+    // using Tiled's first gid
+    private const int TILED_FIRST_GID = 1;
+
     private static Dictionary<int, string> PopulateTilesetMap(Hashtable data) {
       Dictionary<int, string> tilesetMap = new Dictionary<int, string>();
       tilesetMap.Add(0, "");
@@ -25,41 +29,46 @@ namespace Level {
       return tilesetMap;
     }
 
+    private static GameObject prefab(ArrayList mapData, Dictionary<int, string> tilesetMap, int index) {
+      int prefabKey = (Convert.ToInt32(mapData[index]));
+      if (prefabKey != 0) {
+        prefabKey -= TILED_FIRST_GID;
+      }
+      string prefabName = tilesetMap[prefabKey];
+      
+      return Resources.Load<GameObject>("Prefabs/" + prefabName);
+    }
+
+    private static Hashtable decode(string name) {
+      var json = File.ReadAllText("Assets/Resources/Tilemaps/" + name + ".json");
+      return (Hashtable)JSON.JsonDecode(json);
+    }
+
+    private static void add(GameObject obj, int i, int j, List<Tile> tiles) {
+      // we'll return a null object if we run
+      // into tiled's placeholder (tile id 0)
+      if (obj != null) {
+        var position = new Vector3(j + 0.5f, i - 0.5f);
+        tiles.Add(new Tile(position, obj));
+      } 
+    }
+    
     public static List<Tile> Load(string name) {
       List<Tile> tiles = new List<Tile>();
-
-      var json = File.ReadAllText("Assets/Resources/Tilemaps/" + name + ".json");
-      var data = (Hashtable)JSON.JsonDecode(json);
-
-      var tilesWide = int.Parse(data["width"].ToString());
-      var tilesHigh = int.Parse(data["height"].ToString());
-
+      var data = decode(name);
       Dictionary<int, string> tilesetMap = PopulateTilesetMap(data);
 
-      int firstGid = 1;
       foreach (Hashtable layer in (ArrayList)data["layers"]) {
         int tileIndex = 0;
         ArrayList mapData = (ArrayList)layer["data"];
 
-        for (int i = tilesWide; i > 0; i--) {
-          for (int j = 0; j < tilesHigh; j++) {
-            // This is already converted to game units
-            // ie. 16px is 1 unit.
-            int prefabKey = (Convert.ToInt32(mapData[tileIndex]));
-            if (prefabKey != 0) {
-              prefabKey -= firstGid;
-            }
-            string prefabName = tilesetMap[prefabKey];
-            
-            GameObject obj = Resources.Load<GameObject>("Prefabs/" + prefabName);
-            
-            // we'll return a null object if we run
-            // into tiled's placeholder (tile id 0)
-            if (obj != null) {
-              var position = new Vector3(j + 0.5f, i - 0.5f);
-              tiles.Add(new Tile(position, obj));
-            }
-            
+        // This is already converted to game units
+        // ie. 16px is 1 unit.
+        for (int i = int.Parse(data["width"].ToString()); i > 0; i--) {
+          for (int j = 0; j < int.Parse(data["height"].ToString()); j++) {
+            GameObject obj = prefab(mapData, tilesetMap, tileIndex);
+
+            add(obj, i, j, tiles);
             tileIndex += 1;
           }
         }

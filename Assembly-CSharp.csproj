@@ -63,8 +63,8 @@
      <Compile Include="Assets\Resources\Scripts\Level\Tilemap.cs" />
      <Compile Include="Assets\Resources\Scripts\Level\World.cs" />
      <Compile Include="Assets\Resources\Scripts\Player\Attack.cs" />
+     <Compile Include="Assets\Resources\Scripts\Player\Collect.cs" />
      <Compile Include="Assets\Resources\Scripts\Player\Move.cs" />
-     <Compile Include="Assets\Resources\Scripts\Player\Weapon.cs" />
      <Compile Include="Assets\Resources\Scripts\UI\Health.cs" />
      <Compile Include="Assets\Resources\Scripts\Weapons\Arrow.cs" />
      <Compile Include="Assets\Resources\Scripts\Weapons\Bomb.cs" />

@@ -9,7 +9,6 @@ namespace Level {
 
 		void Start() {
       generate();
-      // TODO activate one of the areas
 		}
 
     private void addToParent(GameObject obj) {
