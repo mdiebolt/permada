@@ -4,24 +4,31 @@ using System.Collections.Generic;
 
 namespace Level {
 	public class World : MonoBehaviour {
-    public List<Area> world;
-    public int width = 1;
-    public int height = 1;
-
-		private Area activeArea;
+    private int width = 1;
+    private int height = 1;
 
 		void Start() {
       generate();
       // TODO activate one of the areas
 		}
 
+    private void addToParent(GameObject obj) {
+      obj.transform.parent = gameObject.transform;
+    }
+
+    private void load(string name, int xOffset, int yOffset) {
+      var mapData = Tilemap.Load(name);
+      
+      foreach (var tile in mapData) {
+        addToParent(tile.Instantiate(xOffset, yOffset));
+      }
+    }
+
     private void generate() {
-      for (int i = 0; i < width; i++) {
-        for (int j = 0; i < height; j++) {
+      for (int i = -width; i <= width; i++) {
+        for (int j = -height; j <= height; j++) {
           // TODO: pick areas intelligently
-          var area = gameObject.AddComponent<Area>();
-          area.Load("forest", i, j);
-          world.Add(area);
+          load("forest", i, j);
         }
       }
     }

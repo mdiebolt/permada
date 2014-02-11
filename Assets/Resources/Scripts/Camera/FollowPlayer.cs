@@ -88,13 +88,6 @@ namespace Camera {
         minY = midpoint - 6f; 
         maxY = midpoint + 6f;
       } 
-
-      LoadMap();
-    }
-
-    private void LoadMap() {
-      // TODO switch active area on map
-      //world.Load((int)currentLocation.x, (int)currentLocation.y);
     }
 
     private void UpdateCameraPosition() {

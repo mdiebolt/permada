@@ -8,16 +8,6 @@ using System.IO;
 using System;
 
 namespace Level {
-  public class Tile {
-    public Vector3 Position;
-    public GameObject TilePrefab;
-
-    public Tile(Vector3 position, GameObject tilePrefab) {
-      Position = position;
-      TilePrefab = tilePrefab;
-    }
-  }
-
   public class Tilemap { 
     private static Dictionary<int, string> PopulateTilesetMap(Hashtable data) {
       Dictionary<int, string> tilesetMap = new Dictionary<int, string>();

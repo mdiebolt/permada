@@ -1,11 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Scripts/Level/Tilemap.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Scripts/Level/World.cs">
     <Files>
-      <File FileName="Assets/Resources/Scripts/Level/Tilemap.cs" Line="9" Column="1" />
-      <File FileName="Assets/Resources/Scripts/Level/Area.cs" Line="16" Column="92" />
-      <File FileName="Assets/Resources/Scripts/Level/World.cs" Line="19" Column="37" />
-      <File FileName="Assets/Resources/Scripts/Camera/FollowPlayer.cs" Line="96" Column="40" />
+      <File FileName="Assets/Resources/Scripts/Level/Tilemap.cs" Line="50" Column="37" />
+      <File FileName="Assets/Resources/Scripts/Level/World.cs" Line="36" Column="14" />
+      <File FileName="Assets/Resources/Scripts/Camera/FollowPlayer.cs" Line="14" Column="17" />
+      <File FileName="Assets/Resources/Scripts/Level/Tile.cs" Line="21" Column="48" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
