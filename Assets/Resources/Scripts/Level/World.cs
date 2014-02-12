@@ -27,7 +27,13 @@ namespace Level {
       for (int i = -width; i <= width; i++) {
         for (int j = -height; j <= height; j++) {
           // TODO: pick areas intelligently
-          load("forest", i, j);
+          var num = Random.Range(0, 10);
+
+          if(num <= 5) {
+            load("forest", i, j);
+          } else {
+            load("maze", i, j);
+          }
         }
       }
     }

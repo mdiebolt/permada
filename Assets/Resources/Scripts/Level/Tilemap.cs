@@ -44,12 +44,12 @@ namespace Level {
       return (Hashtable)JSON.JsonDecode(json);
     }
 
-    private static void add(GameObject obj, int i, int j, List<Tile> tiles) {
+    private static void add(GameObject obj, int i, int j, string layer, List<Tile> tiles) {
       // we'll return a null object if we run
       // into tiled's placeholder (tile id 0)
       if (obj != null) {
         var position = new Vector3(j + 0.5f, i - 0.5f);
-        tiles.Add(new Tile(position, obj));
+        tiles.Add(new Tile(position, layer, obj));
       } 
     }
     
@@ -68,7 +68,7 @@ namespace Level {
           for (int j = 0; j < int.Parse(data["height"].ToString()); j++) {
             GameObject obj = prefab(mapData, tilesetMap, tileIndex);
 
-            add(obj, i, j, tiles);
+            add(obj, i, j, (string)layer["name"], tiles);
             tileIndex += 1;
           }
         }
