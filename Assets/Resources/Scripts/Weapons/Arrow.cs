@@ -10,7 +10,11 @@ namespace Weapons {
     private int damage = 2;
 
     public void Start() {
-      var facing = GameObject.Find("Player").GetComponent<Move>().facing;
+      var facing = GameObject
+        .Find("Player")
+        .GetComponent<Move>()
+        .facing;
+
       velocity = facing * speed;
     }
 

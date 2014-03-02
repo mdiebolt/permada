@@ -7,11 +7,15 @@ TagManager:
   - Weapon
   - Level
   - Trigger
-  - 
-  - 
-  - 
-  - 
-  - 
+  - (0, 0)
+  - (1, 0)
+  - (0, 1)
+  - (-1, 0)
+  - (0, -1)
+  - (1, 1)
+  - (1, -1)
+  - (-1, -1)
+  - (-1, 1)
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

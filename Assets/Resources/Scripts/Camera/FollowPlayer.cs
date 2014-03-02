@@ -1,17 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using Level;
 
 namespace Camera {
 	public class FollowPlayer : MonoBehaviour {
-		public float xMargin = 1f;		
-		public float yMargin = 1f;		
-
 		public float xSmooth = 16f;		
 		public float ySmooth = 16f;	
-
-		public World world;
 
     public float minX;
     public float maxX;
@@ -21,8 +15,6 @@ namespace Camera {
 
 		private Transform player;
 
-    private Vector3 currentLocation;
-
     private int cameraLeft = 0;
     private int cameraRight = 24;
 
@@ -30,67 +22,79 @@ namespace Camera {
     private int cameraBottom = 0;
 
 		void Start() {
-      currentLocation = new Vector3(0, 0);
-			player = GameObject.FindGameObjectWithTag("Player").transform;	
+			player = GameObject
+        .FindGameObjectWithTag("Player")
+        .transform;	
 		}
 		
 		void FixedUpdate() {
 			TrackPlayer();
 		}
 
-		private bool IsOutsideXMargin() {
-			return Mathf.Abs(transform.position.x - player.position.x) > xMargin;
-		}
-		
-		private bool IsOutsideYMargin() {
-			return Mathf.Abs(transform.position.y - player.position.y) > yMargin;
-		}
+    private void updateCurrentPosition(int x, int y) {
+      GameObject
+        .Find("World")
+        .GetComponent<Level.World>()
+        .UpdateCurrentPosition(x, y);
+    }
 
-    private void SwitchAreas() {
+    private void moveCameraHorizontally(int direction) {
+      var amount = direction * 24;
+      
+      cameraLeft += amount;
+      cameraRight += amount;
+
+      var midpoint = (cameraLeft + cameraRight) / 2;
+      
+      minX = midpoint - 1.5f;
+      maxX = midpoint + 1.5f;
+
+      updateCurrentPosition(direction, 0);
+    }
+
+    private void moveCameraVertically(int direction) {
+      var amount = direction * 24;
+      
+      cameraTop += amount;
+      cameraBottom += amount;
+
+      var midpoint = (cameraTop + cameraBottom) / 2; 
+      
+      minY = midpoint - 6f; 
+      maxY = midpoint + 6f;
+
+      updateCurrentPosition(0, direction);
+    }
+
+    private void focusLeft() {
+      moveCameraHorizontally(-1);
+    }
+
+    private void focusRight() {
+      moveCameraHorizontally(1);
+    }
+
+    private void focusUp() {
+      moveCameraVertically(1);
+    }
+
+    private void focusDown() {
+      moveCameraVertically(-1);
+    }
+
+    private void switchAreas() {
       if (player.position.x < cameraLeft) {
-        cameraLeft -= 24;
-        cameraRight -= 24;
-
-        currentLocation = new Vector3(currentLocation.x - 1, currentLocation.y);
-
-        var midpoint = (cameraLeft + cameraRight) / 2;
-        
-        minX = midpoint - 1.5f; 
-        maxX = midpoint + 1.5f; 
+        focusLeft();
       } else if (player.position.x > cameraRight) {
-        cameraLeft += 24;
-        cameraRight += 24;
-
-        currentLocation = new Vector3(currentLocation.x + 1, currentLocation.y);
-
-        var midpoint = (cameraLeft + cameraRight) / 2;
-
-        minX = midpoint - 1.5f; 
-        maxX = midpoint + 1.5f; 
+        focusRight();
       } else if (player.position.y < cameraBottom) {
-        cameraTop -= 24;
-        cameraBottom -= 24;
-
-        currentLocation = new Vector3(currentLocation.x, currentLocation.y - 1);
-
-        var midpoint = (cameraTop + cameraBottom) / 2;
-
-        minY = midpoint - 6f; 
-        maxY = midpoint + 6f; 
+        focusDown();
       } else if (player.position.y > cameraTop) {
-        cameraTop += 24;
-        cameraBottom += 24;
-
-        currentLocation = new Vector3(currentLocation.x, currentLocation.y + 1);
-
-        var midpoint = (cameraTop + cameraBottom) / 2;
-
-        minY = midpoint - 6f; 
-        maxY = midpoint + 6f;
+        focusUp();
       } 
     }
 
-    private void UpdateCameraPosition() {
+    private void updateCameraPosition() {
       var targetX = transform.position.x;
       var targetY = transform.position.y;
       
@@ -107,8 +111,8 @@ namespace Camera {
     }
 
 		void TrackPlayer() {
-      UpdateCameraPosition();
-      SwitchAreas();
+      updateCameraPosition();
+      switchAreas();
 		}
 	}
 }

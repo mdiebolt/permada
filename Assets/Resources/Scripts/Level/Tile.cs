@@ -23,7 +23,7 @@ namespace Level {
       var obj = GameObject.Instantiate(prefab, pos, Quaternion.identity) as GameObject;
       obj.renderer.sortingLayerName = layer;
 
-      return GameObject.Instantiate(prefab, pos, Quaternion.identity) as GameObject;
+      return obj;
     }
   }
 }
