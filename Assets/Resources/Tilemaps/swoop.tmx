@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="25" height="25" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="forest" tilewidth="16" tileheight="16">
+  <image source="../Sprites/forest.png" width="659" height="512"/>
+  <tile id="10">
+   <properties>
+    <property name="Prefab" value="EmptyGrass"/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="Prefab" value="Grass"/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="Prefab" value="Enemy"/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="Prefab" value="Slider"/>
+   </properties>
+  </tile>
+  <tile id="92">
+   <properties>
+    <property name="Prefab" value="Bush"/>
+   </properties>
+  </tile>
+  <tile id="292">
+   <properties>
+    <property name="Prefab" value="Rock"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Background" width="25" height="25">
+  <data encoding="base64" compression="zlib">
+   eJztw8EJAAAMA6H7Z/99O0dBwVVTVfXVA2h9Gtw=
+  </data>
+ </layer>
+ <layer name="Foreground" width="25" height="25">
+  <data encoding="base64" compression="zlib">
+   eJxjYKA+kKWBmYMNjAQ/DjYwEsJ8JPhxsIGREOYjwY+DDYyEMB8JfhxsAD3MAQJvAQY=
+  </data>
+ </layer>
+</map>

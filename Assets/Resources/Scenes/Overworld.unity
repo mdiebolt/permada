@@ -150,11 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9480663d83c324f8cbff4be1d9ba46d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xMargin: 1
-  yMargin: 1
   xSmooth: 2
   ySmooth: 2
-  world: {fileID: 0}
   minX: 10.5
   maxX: 13.5
   minY: 6

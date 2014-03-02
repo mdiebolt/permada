@@ -12,7 +12,10 @@ namespace Level {
     private List<string> levels = new List<string> { 
       "forest", 
       "forest1", 
-      "maze"
+      "maze",
+      "battle",
+      "swoop",
+      "dark_world"
     };
     
 		void Start() {

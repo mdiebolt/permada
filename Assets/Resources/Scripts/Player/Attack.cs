@@ -45,12 +45,12 @@ namespace Player {
     }
 
   	void Update() {
-      if (Input.GetKeyDown("b")) {
+      if (Input.GetButtonDown("Bomb")) {
         var bomb = Resources.Load<GameObject>("Prefabs/Bomb");
         Instantiate(bomb, transform.position, Quaternion.identity);
       }
 
-      if (Input.GetKeyDown("a")) {
+      if (Input.GetButtonDown("Arrow")) {
         var prefab = Resources.Load<GameObject>("Prefabs/Arrow");
         Instantiate(prefab, transform.position, Quaternion.identity);
       }

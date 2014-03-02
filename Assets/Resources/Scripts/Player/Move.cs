@@ -15,37 +15,30 @@ namespace Player {
 		}
 
 		private void UpdateFacing() {
-			if(Input.GetKey(KeyCode.LeftArrow)) {
-        facing = Vector3.left;
-			}
+      var horizontal = Input.GetAxis("Horizontal");
+      var vertical = Input.GetAxis("Vertical");
+      var direction = new Vector2(horizontal, vertical);
 			
-			if(Input.GetKey(KeyCode.RightArrow)) {
-        facing = Vector3.right;
-			}
-
-			if(Input.GetKey(KeyCode.UpArrow)) {
-        facing = Vector3.up;
-			}
-				
-			if(Input.GetKey(KeyCode.DownArrow)) {
-        facing = Vector3.down;
-			}
+      if(Mathf.Abs(horizontal) > Mathf.Abs(vertical)) {
+        if (horizontal > 0) {
+          facing = Vector3.right; 
+        } else {
+          facing = Vector3.left;
+        }
+			} else if (Mathf.Abs(vertical) > Mathf.Abs(horizontal)) {
+        if (vertical > 0) {
+          facing = Vector3.up;
+        } else {
+          facing = Vector3.down;
+        }
+      }
 		}
 
 		private void UpdateVelocity() {
       velocity = Vector3.zero;
-			
-			if(Input.GetKey(KeyCode.LeftArrow))
-				velocity.x = -Speed;
-			
-			if(Input.GetKey(KeyCode.RightArrow)) 
-				velocity.x = Speed;
 
-			if(Input.GetKey(KeyCode.UpArrow))
-				velocity.y = Speed;
-
-			if(Input.GetKey(KeyCode.DownArrow))
-				velocity.y = -Speed;
+      velocity.x = Input.GetAxis("Horizontal") * Speed;
+      velocity.y = Input.GetAxis("Vertical") * Speed;
 		}
    
 		void Update() {
