@@ -57,13 +57,16 @@
      <Compile Include="Assets\Resources\Scripts\Enemy\Shoot.cs" />
      <Compile Include="Assets\Resources\Scripts\Enemy\VerticalSlide.cs" />
      <Compile Include="Assets\Resources\Scripts\Expirable.cs" />
+     <Compile Include="Assets\Resources\Scripts\Ghostable.cs" />
      <Compile Include="Assets\Resources\Scripts\Knockable.cs" />
      <Compile Include="Assets\Resources\Scripts\Level\Activate.cs" />
      <Compile Include="Assets\Resources\Scripts\Level\Tile.cs" />
      <Compile Include="Assets\Resources\Scripts\Level\Tilemap.cs" />
      <Compile Include="Assets\Resources\Scripts\Level\World.cs" />
+     <Compile Include="Assets\Resources\Scripts\Pausable.cs" />
      <Compile Include="Assets\Resources\Scripts\Player\Attack.cs" />
      <Compile Include="Assets\Resources\Scripts\Player\Collect.cs" />
+     <Compile Include="Assets\Resources\Scripts\Player\Combo.cs" />
      <Compile Include="Assets\Resources\Scripts\Player\Move.cs" />
      <Compile Include="Assets\Resources\Scripts\UI\Health.cs" />
      <Compile Include="Assets\Resources\Scripts\Weapons\Arrow.cs" />

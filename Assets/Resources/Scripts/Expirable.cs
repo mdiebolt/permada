@@ -10,7 +10,8 @@ public class Expirable : MonoBehaviour {
 	void Update() {
     age += Time.deltaTime;
 
-    if (age > duration)
-      Destroy(gameObject);	
+    if (age > duration) {
+      Destroy(gameObject);
+    }
 	}
 }

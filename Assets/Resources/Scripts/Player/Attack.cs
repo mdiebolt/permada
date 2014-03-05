@@ -1,71 +1,58 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace Player {
   public class Attack : MonoBehaviour {
-    private IEnumerator CountTo(float duration) {
-      float elapsed = 0;
-      
-      while (elapsed < duration) {
-        elapsed = Mathf.MoveTowards(elapsed, duration, Time.deltaTime);
-        yield return null;
+    private List<Combo> combos = new List<Combo>();
+    private List<string> attacks = new List<string>(7);
+    private bool comboActive = false;
+
+    void Start() {
+      createCombos();
+    }
+
+    private void createCombos() {
+      var arrowKeys = new List<string>() { "Arrow", "Arrow", "Arrow" };
+      combos.Add(new Combo(arrowKeys));
+
+      var bombKeys = new List<string>() { "Bomb", "Bomb", "Bomb" };
+      combos.Add(new Combo(bombKeys));
+    }
+
+    private void attack(string type) {
+      if (comboActive && attacks.Count < 7) {
+        attacks.Add(type);
+
+        foreach (var c in combos) {
+          if (c.Matches(attacks)) {
+            Debug.Log(c.Name + " combo executed");
+          }
+        }
+      } else {
+        var obj = Resources.Load<GameObject>("Prefabs/" + type);
+        Instantiate(obj, transform.position, Quaternion.identity);
       }
     }
 
-    private IEnumerator ghost() {
-      var collider = gameObject.GetComponent<CircleCollider2D>();
-      collider.enabled = false;
-
-      var spriteRenderer = GetComponent<SpriteRenderer>();
-      var color = spriteRenderer.color;
-      color.a = 0.3f;
-
-      spriteRenderer.color = color;
-
-      yield return StartCoroutine(CountTo(10));
-
-      collider.enabled = true;
-
-      color.a = 1.0f;
-      spriteRenderer.color = color;
-    }
-
-    private IEnumerator bigHitPause() {
-      int elapsed = 0;
-      int duration = 30;
-
-      Time.timeScale = 0;
-
-      while (elapsed < duration) {
-        elapsed += 1; 
-        yield return null;
-      }
-
-      Time.timeScale = 1.0f;
+    private void clearCombo() {
+      attacks.Clear();
     }
 
   	void Update() {
+      if (Input.GetButton("Combo")) {
+        comboActive = true;
+      } else {
+        comboActive = false;
+        clearCombo();
+      }
+
       if (Input.GetButtonDown("Bomb")) {
-        var bomb = Resources.Load<GameObject>("Prefabs/Bomb");
-        Instantiate(bomb, transform.position, Quaternion.identity);
+        attack("Bomb");
       }
 
       if (Input.GetButtonDown("Arrow")) {
-        var prefab = Resources.Load<GameObject>("Prefabs/Arrow");
-        Instantiate(prefab, transform.position, Quaternion.identity);
-      }
-
-      if (Input.GetKeyDown("g")) {
-        var grave = GameObject.Find("Grave");
-        var distance = Vector3.Distance(grave.transform.position, transform.position);
-
-        if (distance < 1.25f) {
-          StartCoroutine(ghost());
-        }
-      }
-
-      if (Input.GetKeyDown("t")) {
-        StartCoroutine(bigHitPause());
+        attack("Arrow");
       }
   	}
   }

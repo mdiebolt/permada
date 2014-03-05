@@ -23,7 +23,8 @@ public class Damagable : MonoBehaviour {
     health -= damage;
     updateUI();
     
-    if (health <= 0)
+    if (health <= 0) {
       Destroy(gameObject);
+    }
   }
 }
