@@ -4,9 +4,15 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace Player {
+  public delegate void callback(Combo combo);
+
   public class Combo {
     private List<string> keys;
     public string Name;
+   
+    public void Execute(callback cb) {
+      cb(this);
+    }
 
     public Combo(List<string> comboKeys) {
       keys = comboKeys;

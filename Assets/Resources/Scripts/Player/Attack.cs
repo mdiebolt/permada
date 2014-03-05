@@ -14,10 +14,12 @@ namespace Player {
 
     private void createCombos() {
       var arrowKeys = new List<string>() { "Arrow", "Arrow", "Arrow" };
-      combos.Add(new Combo(arrowKeys));
+      var arrowCombo = new Combo(arrowKeys);
+      combos.Add(arrowCombo);
 
       var bombKeys = new List<string>() { "Bomb", "Bomb", "Bomb" };
-      combos.Add(new Combo(bombKeys));
+      var bombCombo = new Combo(bombKeys);
+      combos.Add(bombCombo);
     }
 
     private void attack(string type) {
@@ -26,7 +28,21 @@ namespace Player {
 
         foreach (var c in combos) {
           if (c.Matches(attacks)) {
-            Debug.Log(c.Name + " combo executed");
+            // TODO: call c.Execute() here
+            var obj = Resources.Load<GameObject>("Prefabs/" + type);
+
+            var right = transform.position + new Vector3(2, 0);
+            var left = transform.position + new Vector3(-2, 0);
+            var up = transform.position + new Vector3(0, 2);
+            var down = transform.position + new Vector3(0, -2);
+
+            Instantiate(obj, up, Quaternion.identity);
+            Instantiate(obj, down, Quaternion.identity);
+            Instantiate(obj, left, Quaternion.identity);
+            Instantiate(obj, right, Quaternion.identity);
+
+            clearCombo();
+            break;
           }
         }
       } else {
@@ -40,10 +56,9 @@ namespace Player {
     }
 
   	void Update() {
-      if (Input.GetButton("Combo")) {
-        comboActive = true;
-      } else {
-        comboActive = false;
+      comboActive = Input.GetButton("Combo");
+
+      if (!comboActive) {
         clearCombo();
       }
 
