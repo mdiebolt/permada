@@ -11,7 +11,7 @@ public class Damagable : MonoBehaviour {
     }
   }
 
-  void Heal(int amount) {
+  public void Heal(int amount) {
     if (health < maxHealth) {
       health += amount;
     }
@@ -19,7 +19,7 @@ public class Damagable : MonoBehaviour {
     updateUI();
   }
 
-  void Damage(int damage) {
+  public void Damage(int damage) {
     health -= damage;
     updateUI();
     

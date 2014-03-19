@@ -60,8 +60,9 @@ namespace Weapons {
     void OnTriggerEnter2D(Collider2D collider) {
       var obj = collider.gameObject;
 
-      if (obj.GetComponent<Damagable>())
+      if (obj.GetComponent<Damagable>()) {
         obj.SendMessage("Damage", damage);
+      }
     }
   }
 }

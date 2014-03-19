@@ -70,6 +70,10 @@ TagManager:
     userID: 4
     uniqueID: 2511236001
     locked: 0
+  - name: Enemy
+    userID: 6
+    uniqueID: 2991422225
+    locked: 0
   - name: UI
     userID: 5
     uniqueID: 149272721

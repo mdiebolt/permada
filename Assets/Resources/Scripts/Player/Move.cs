@@ -3,8 +3,8 @@ using System.Collections;
 
 namespace Player {
 	public class Move : MonoBehaviour {
-		private Vector3 velocity = new Vector3(1.0f, 0, 0);
-		public Vector3 facing;
+		private Vector3 velocity = Vector3.zero;
+		public Vector3 facing = Vector3.down;
 		public float Speed = 6.0f;
 
 		private void MovePlayer() {
@@ -17,7 +17,6 @@ namespace Player {
 		private void UpdateFacing() {
       var horizontal = Input.GetAxis("Horizontal");
       var vertical = Input.GetAxis("Vertical");
-      var direction = new Vector2(horizontal, vertical);
 			
       if(Mathf.Abs(horizontal) > Mathf.Abs(vertical)) {
         if (horizontal > 0) {

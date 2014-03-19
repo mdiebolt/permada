@@ -680,7 +680,7 @@ TextureImporter:
         height: 25
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: zelda_71
+    - name: boss
       rect:
         serializedVersion: 2
         x: 313

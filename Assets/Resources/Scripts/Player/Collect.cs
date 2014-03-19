@@ -7,7 +7,7 @@ namespace Player {
 
     void OnTriggerEnter2D(Collider2D collider) {
       var obj = collider.gameObject;
-      
+
       if(collider.name == "Serpin") {
         Destroy(obj);
         serpinCount += 1;

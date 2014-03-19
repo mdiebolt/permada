@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using Enemy;
 
 namespace Enemy {
   public class Shoot : MonoBehaviour {
@@ -16,21 +15,21 @@ namespace Enemy {
       elapsedTime += Time.deltaTime;
 
       if (elapsedTime > 5.0f) {
-        Fire();
+        fire();
         elapsedTime = 0;
       }
   	}
 
-    private void createShot(Vector3 dir) {
+    private void createShot(Vector3 direction) {
       var obj = Instantiate(boomerang, transform.position, Quaternion.identity) as GameObject;
-      obj.SendMessage("SetDirection", dir);
+      obj.GetComponent<Bullet>().Direction = direction;
     }
 
-    void Fire() {
-      createShot(new Vector3(0, 1, 0));
-      createShot(new Vector3(0, -1, 0));
-      createShot(new Vector3(1, 0, 0));
-      createShot(new Vector3(-1, 0, 0));
+    private void fire() {
+      createShot(Vector3.up);
+      createShot(Vector3.down);
+      createShot(Vector3.left);
+      createShot(Vector3.right);
     }
   }
 }

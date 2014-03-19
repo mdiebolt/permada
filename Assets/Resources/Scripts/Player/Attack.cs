@@ -56,7 +56,7 @@ namespace Player {
     }
 
   	void Update() {
-      comboActive = Input.GetButton("Combo");
+      comboActive = Input.GetAxis("Combo") == 1;
 
       if (!comboActive) {
         clearCombo();
