@@ -35,7 +35,12 @@
  </layer>
  <layer name="Foreground" width="25" height="25">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo4B+gAePnAwd7KAW4CHSHh48mJp2kCI+0uyQQVNHCzuIMQufXh4kmgdNjFh7iFFPSTokJV+Rqp4cQGyc08oOagJ62DEKhicAAK5nAtE=
+   eJxjYBgFo4B+gGcY2UGMPTx4MDXtIEV81I7BZwcPEs2DJkasPcSopyQdkpKvSFVPDhgudsDsGQWjgBwAAAnoAn0=
+  </data>
+ </layer>
+ <layer name="Enemy" width="25" height="25">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2BwAJmBdsAoGJZgNF2NPDAa56NgpAAArkMAVQ==
   </data>
  </layer>
 </map>

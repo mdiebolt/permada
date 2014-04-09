@@ -50,7 +50,7 @@
  </layer>
  <layer name="Enemy" width="25" height="25">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo4C+QI7G6kfBKBgFAw9G8/koGAW0BwCBwgB5
+   eJxjYBgFo2AUkALkaKx+FIyCUTDwYDSfj4KhAAAnwgB5
   </data>
  </layer>
 </map>

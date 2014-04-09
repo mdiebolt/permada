@@ -107,7 +107,7 @@ Camera:
   m_GameObject: {fileID: 112669219}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 3
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -118,8 +118,8 @@ Camera:
   near clip plane: .300000012
   far clip plane: 65
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 5.9000001
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -153,9 +153,9 @@ MonoBehaviour:
   xSmooth: 2
   ySmooth: 2
   minX: 10.5
-  maxX: 13.5
+  maxX: 14.5
   minY: 6
-  maxY: 18
+  maxY: 19
 --- !u!1001 &268404722
 Prefab:
   m_ObjectHideFlags: 0
@@ -327,6 +327,7 @@ GameObject:
   - 58: {fileID: 1848662872}
   - 114: {fileID: 1848662868}
   - 114: {fileID: 1848662874}
+  - 114: {fileID: 1848662875}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -346,6 +347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f62f882a063844b989877bb4b3f3a51b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BaseDamage: 1
 --- !u!212 &1848662869
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -437,3 +439,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   maxHealth: 5
+--- !u!114 &1848662875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400006, guid: e70edc061a0f44603bda4f986fd324f5,
+    type: 2}
+  m_PrefabInternal: {fileID: 446174211}
+  m_GameObject: {fileID: 1848662867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc37bac1d8e469985765a40b633474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

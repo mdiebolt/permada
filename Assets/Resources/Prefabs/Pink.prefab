@@ -69,9 +69,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   path:
   - {x: 0, y: 0, z: 0}
-  - {x: 10, y: 0, z: 0}
-  - {x: 10, y: 10, z: 0}
-  - {x: 0, y: 10, z: 0}
+  - {x: 4, y: 0, z: 0}
+  - {x: 4, y: 4, z: 0}
+  - {x: 0, y: 4, z: 0}
   moveTime: 3
   pauseTime: 1
   moveEase: 0

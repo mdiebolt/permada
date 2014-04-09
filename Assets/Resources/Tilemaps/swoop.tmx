@@ -40,6 +40,11 @@
  </layer>
  <layer name="Foreground" width="25" height="25">
   <data encoding="base64" compression="zlib">
+   eJxjYMAEPFjEiAGk6Bu1Y9SOUTtG7Ri1Y9SOUTtG7Ri1g3x9AIDJAlk=
+  </data>
+ </layer>
+ <layer name="Enemy" width="25" height="25">
+  <data encoding="base64" compression="zlib">
    eJxjYKA+kKWBmYMNjAQ/DjYwEsJ8JPhxsIGREOYjwY+DDYyEMB8JfhxsAD3MAQJvAQY=
   </data>
  </layer>
