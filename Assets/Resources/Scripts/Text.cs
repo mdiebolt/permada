@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Text : MonoBehaviour {
-  private string message = "You Win!";
+  public string message;
 
   void OnGUI() {
     var position = new Rect(400, 250, 100, 50);

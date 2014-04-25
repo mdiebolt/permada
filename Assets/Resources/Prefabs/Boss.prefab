@@ -11,8 +11,8 @@ GameObject:
   - 212: {fileID: 21200000}
   - 50: {fileID: 5000000}
   - 58: {fileID: 5800000}
-  - 114: {fileID: 11400000}
   - 114: {fileID: 11400002}
+  - 114: {fileID: 11400000}
   m_Layer: 11
   m_Name: Boss
   m_TagString: Enemy
@@ -27,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .794213295, y: .807822108, z: 0}
+  m_LocalPosition: {x: 31.720047, y: 8.53266716, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -65,9 +65,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b15673b7d0c67449b96db28bb7e5e4c1, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f40bc23c3d774f5792f2c58cbe063fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 200
+  maxHealth: 200
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -76,11 +78,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f40bc23c3d774f5792f2c58cbe063fb, type: 3}
+  m_Script: {fileID: 11500000, guid: b15673b7d0c67449b96db28bb7e5e4c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 200
-  maxHealth: 200
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

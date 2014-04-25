@@ -27,6 +27,8 @@ public class Damagable : MonoBehaviour {
       Destroy(gameObject);
       if (gameObject.name == "Boss(Clone)") {
         Application.LoadLevel("Victory");
+      } else if (gameObject.name == "Player") {
+        Application.LoadLevel("Death");
       }
     }
   }

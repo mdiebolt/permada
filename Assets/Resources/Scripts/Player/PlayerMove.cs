@@ -2,11 +2,11 @@
 using System.Collections;
 
 public class PlayerMove : MonoBehaviour {
-  private const float WORLD_MIN_X = -25f;
-  private const float WORLD_MAX_X = 50f;
+  private float worldMinX = -(float)World.AREA_WIDTH;
+  private float worldMaxX = (float)(2 * World.AREA_WIDTH);
 
-  private const float WORLD_MIN_Y = -25f;
-  private const float WORLD_MAX_Y = 50f;
+  private float worldMinY = -(float)World.AREA_HEIGHT;
+  private float worldMaxY = (float)(2 * World.AREA_WIDTH);
 
 	private Vector3 velocity = Vector3.zero;
 	public Vector3 facing = Vector3.down;
@@ -16,20 +16,20 @@ public class PlayerMove : MonoBehaviour {
     var position = transform.position;
 
     // 0.5 offsets are half the player sprite 
-    if (position.x - 0.5 < WORLD_MIN_X) {
-      position.x = WORLD_MIN_X + 0.5f;
+    if (position.x - 0.5 < worldMinX) {
+      position.x = worldMinX + 0.5f;
     }
 
-    if (position.x + 0.5 > WORLD_MAX_X) {
-      position.x = WORLD_MAX_X - 0.5f;
+    if (position.x + 0.5 > worldMaxX) {
+      position.x = worldMaxX - 0.5f;
     }
 
-    if (position.y - 0.5 < WORLD_MIN_Y) {
-      position.y = WORLD_MIN_Y + 0.5f;
+    if (position.y - 0.5 < worldMinY) {
+      position.y = worldMinY + 0.5f;
     }
 
-    if (position.y + 0.5 > WORLD_MAX_Y) {
-      position.y = WORLD_MAX_Y - 0.5f;
+    if (position.y + 0.5 > worldMaxY) {
+      position.y = worldMaxY - 0.5f;
     }
 
     transform.position = position;

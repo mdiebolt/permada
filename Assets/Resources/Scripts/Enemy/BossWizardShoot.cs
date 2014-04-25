@@ -19,7 +19,12 @@ public class BossWizardShoot : MonoBehaviour {
   
   void Update() {
     elapsedTime += Time.deltaTime;
-    
+
+    if (!GameObject.Find("Label(Clone)")) {
+      var label = Resources.Load<GameObject>("Prefabs/Label");
+      Instantiate(label, new Vector3(0.8f, 0.96f, 0), Quaternion.identity);
+    }
+
     if (elapsedTime > 2.0f) {
       attackIndex = (attackIndex + 1) % attacks.Length;
       SendMessage(attacks[attackIndex]);

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ArrowWeapon : MonoBehaviour {
   private Vector3 velocity;
-  private float speed = 15f;
+  private float speed = 10f;
 
   private int damage = 2;
 

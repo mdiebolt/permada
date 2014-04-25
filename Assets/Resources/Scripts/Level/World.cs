@@ -14,7 +14,6 @@ public class World : MonoBehaviour {
   private List<string> levels = new List<string> { 
     "forest", 
     "forest1", 
-    //"maze",
     "battle",
     "swoop",
     "dark_world"
@@ -29,6 +28,11 @@ public class World : MonoBehaviour {
     currentPosition += amount;
 
     foreach (var area in areas) {
+      // Disable the boss text label. The boss will enabled it when activated
+      if (GameObject.Find("Label(Clone)")) {
+        DestroyImmediate(GameObject.Find("Label(Clone)"));
+      }
+
       area.SetActive(area.tag == currentCoordinates());
     }
   }
